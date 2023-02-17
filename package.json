@@ -1,0 +1,14 @@
+{
+  "name": "node-react",
+  "version": "1.0.0",
+  "scripts": {
+    "install_frontend": "cd frontend && npm install",
+    "install_backend": "cd backend && npm install",
+    "install": "npm run install_frontend && npm run install_backend",
+    "start": "concurrently \"cd frontend && npm run start\" \"cd backend && node ./integrationAppToken.js \"",
+    "clean": "rm -rf **/node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
